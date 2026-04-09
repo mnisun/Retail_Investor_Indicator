@@ -1,0 +1,10 @@
+streamlit>=1.30.0
+plotly>=5.18.0
+pandas>=2.1.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+lxml>=4.9.0
+schedule>=1.2.0
+python-telegram-bot>=20.7
+pyupbit>=0.2.33

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"from database import init_db; init_db\\(\\); print\\('DB 초기화 성공'\\)\")",
+      "Bash(/Users/sun/Library/Python/3.9/bin/streamlit run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8501)",
+      "Bash(pkill -f \"streamlit run app.py\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 main.py report)"
+    ]
+  }
+}
