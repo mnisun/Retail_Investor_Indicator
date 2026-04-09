@@ -168,7 +168,7 @@ with col_gauge:
         },
     ))
     fig_gauge.update_layout(height=300, margin=dict(t=50, b=0, l=30, r=30))
-    st.plotly_chart(fig_gauge, use_container_width=True)
+    st.plotly_chart(fig_gauge, width="stretch")
 
 with col_price:
     st.subheader("실시간 코인 가격")
@@ -250,7 +250,7 @@ if hourly_data or price_history:
     fig.update_yaxes(title_text="지수 (0~100)", row=1, col=1)
     fig.update_yaxes(title_text="가격 (KRW)", row=2, col=1)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 else:
     st.info(
         "📌 아직 수집된 데이터가 없습니다.\n\n"
@@ -293,7 +293,7 @@ else:
     )
 
     fig_demo.update_layout(height=600, showlegend=True, template="plotly_dark")
-    st.plotly_chart(fig_demo, use_container_width=True)
+    st.plotly_chart(fig_demo, width="stretch")
 
 st.divider()
 
@@ -334,7 +334,7 @@ with col_regen:
             labels={"display_name": "커뮤니티", "post_count": "게시글 수"},
         )
         fig_bar.update_layout(height=300, template="plotly_dark", showlegend=False)
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, width="stretch")
     else:
         st.info("수집된 데이터가 없습니다.")
 
@@ -371,7 +371,7 @@ with col_keywords:
                 color="빈도", color_continuous_scale="RdYlBu_r",
             )
             fig_kw.update_layout(height=300, template="plotly_dark", showlegend=False, yaxis=dict(autorange="reversed"))
-            st.plotly_chart(fig_kw, use_container_width=True)
+            st.plotly_chart(fig_kw, width="stretch")
         else:
             st.info("감지된 키워드가 없습니다.")
     else:
@@ -421,7 +421,7 @@ if recent_posts:
         "source": "출처", "title": "제목", "comment_count": "댓글",
         "published_at": "작성시간",
     })
-    st.dataframe(df_display, use_container_width=True, height=400)
+    st.dataframe(df_display, width="stretch", height=400)
 else:
     st.info("수집된 게시글이 없습니다. `python main.py scrape` 명령어로 데이터를 수집하세요.")
 
